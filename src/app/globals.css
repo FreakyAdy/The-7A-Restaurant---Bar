@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-7a: #17382F;
+  --color-deep-green: #0E241F;
+  --color-charcoal: #111111;
+  --color-soft-black: #0A0A0A;
+  --color-warm-ivory: #F4F0E8;
+  --color-stone-7a: #D8D1C4;
+  --color-champagne-gold: #C6A15B;
+  --color-bright-gold: #E1BB70;
+  --color-amber-7a: #A86A32;
+  --color-burgundy-7a: #5D2028;
+
+  --font-serif: var(--font-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-sans), "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #F4F0E8;
+  --color-emerald: #17382F;
+  --color-deep-green: #0E241F;
+  --color-charcoal: #111111;
+  --color-gold: #C6A15B;
+  --color-bright-gold: #E1BB70;
+  --color-stone: #D8D1C4;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #F4F0E8;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  selection-background-color: #C6A15B;
+  selection-color: #0A0A0A;
+}
+
+::selection {
+  background-color: #C6A15B;
+  color: #0A0A0A;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #17382F;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A15B;
+}
+
+/* Subtle Film Grain Overlay */
+.grain-overlay {
+  background-image: radial-gradient(rgba(198, 161, 91, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Subtle Gold Borders */
+.border-gold-subtle {
+  border-color: rgba(198, 161, 91, 0.2);
+}
+
+.border-emerald-subtle {
+  border-color: rgba(23, 56, 47, 0.35);
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F4F0E8 0%, #E1BB70 50%, #C6A15B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(90deg, #C6A15B 0%, #F4F0E8 50%, #C6A15B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
